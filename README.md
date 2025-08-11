@@ -1,6 +1,6 @@
-Nombre: Gadyr Calderón Díaz
-Carné: 2022327328
-Curso: IC-8057 – Introducción al Desarrollo de Páginas Web
+Nombre: Gadyr Calderón Díaz \
+Carné: 2022327328 \
+Curso: IC-8057 – Introducción al Desarrollo de Páginas Web \
 Fecha: 10-8-2025
 
 # 💻 Laboratorio 1 – Tecnologías Web Modernas
