@@ -1,32 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Características del desarrollo web moderno</title>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <style>
-      body {
-        font-family: sans-serif;
-        max-width: 800px;
-        margin: 2rem auto;
-        padding: 1rem;
-        line-height: 1.6;
+<head>
+  <meta charset="UTF-8" />
+  <title>Características del desarrollo web moderno</title>
+
+  <!-- Estilos tipo GitHub -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
+
+  <!-- Highlight.js para código -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <!-- Mermaid.js para diagramas -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+  <!-- Librería Marked para convertir MD a HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    body {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <article class="markdown-body" id="content">Cargando documentación...</article>
+
+  <script>
+    // Configuración de Mermaid
+    mermaid.initialize({ startOnLoad: false });
+
+    // Configuración de Marked con Highlight.js
+    marked.setOptions({
+      highlight: function(code, lang) {
+        return hljs.highlightAuto(code, [lang]).value;
       }
-      h1,
-      h2 {
-        color: #2c3e50;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Documentación técnica</h1>
-    <div id="content">Cargando documentación...</div>
-    <script>
-      fetch("README.md")
-        .then((res) => res.text())
-        .then((md) => {
-          document.getElementById("content").innerHTML = marked.parse(md);
+    });
+
+    // Cargar README.md y renderizarlo
+    fetch("README.md")
+      .then(res => res.text())
+      .then(md => {
+        const html = marked.parse(md);
+        document.getElementById("content").innerHTML = html;
+
+        // Procesar bloques Mermaid
+        document.querySelectorAll('code.language-mermaid').forEach((block, i) => {
+          const mermaidDiv = document.createElement('div');
+          mermaidDiv.className = 'mermaid';
+          mermaidDiv.textContent = block.textContent;
+          block.parentNode.replaceWith(mermaidDiv);
         });
-    </script>
-  </body>
+
+        mermaid.init();
+      });
+  </script>
+</body>
 </html>
