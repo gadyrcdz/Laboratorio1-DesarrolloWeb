@@ -5,9 +5,7 @@ Fecha: 10-8-2025
 
 # 💻 Laboratorio 1 – Tecnologías Web Modernas
 
-
 > En este archivo se mostrará tanto de manera de investigación como de manera práctica. Un apartado inicial de manera de investigación y una segunda parte con la manera práctica para desplegar este archivo. 
-
 ---
 
 ## 📋 Contenido
@@ -75,11 +73,11 @@ Fecha: 10-8-2025
 
 - **¿Qué es el control de versiones y por qué es esencial?**: El control de versiones, también conocido como "control de código fuente", es la práctica de rastrear y gestionar los cambios en el código de software.
 - **Conceptos clave: repositorio, commit, branch, merge, pull request**: 
-    - Repositorio: El repositorio es un "espacio" centralizado donde se almacena todo lo que tenga que ver con un trabajo que se esté realizando, este puede ser un repositorio en GitHub, el cuál estará guardado de manera digital.
-    - Commit: Un commit es una palabra reservada para poder guardar todos los cambios que hemos hecho en nuestro entorno de trabajo, utilizando este como podria ser "git commit -m "Add new Hola mundo" ". 
-    - Branch: Branch hace referencia a las ramas que pueden ser creadas en entornos de repositorios, para poder realizar distintos trabajos sin tocar la rama principal, de esta manera tenemos el mismo contenido del main pero en una rama externa, utilizando una comando como "git branch Fix-#101" para crear un branch para solucionar algun issue.
-    - Merge: Merge es para combinar o fucionar los datos de una rama con otra o otras ramas.
-    - Pull request: El pull request PR es para abrir una solicitud a la rama main para poder integrar lo que tengamos en esa rama, de esta manera, si realizamos un issue y lo logramos solucionar podemos abrir un PR para que estos cambios sean revisados y aceptamos en la rama principal de nuestro proyecto.
+    - **Repositorio**: El repositorio es un "espacio" centralizado donde se almacena todo lo que tenga que ver con un trabajo que se esté realizando, este puede ser un repositorio en GitHub, el cuál estará guardado de manera digital.
+    - **Commit**: Un commit es una palabra reservada para poder guardar todos los cambios que hemos hecho en nuestro entorno de trabajo, utilizando este como podria ser "git commit -m "Add new Hola mundo" ". 
+    - **Branch**: Branch hace referencia a las ramas que pueden ser creadas en entornos de repositorios, para poder realizar distintos trabajos sin tocar la rama principal, de esta manera tenemos el mismo contenido del main pero en una rama externa, utilizando una comando como "git branch Fix-#101" para crear un branch para solucionar algun issue.
+    - **Merge**: Merge es para combinar o fucionar los datos de una rama con otra o otras ramas.
+    - **Pull request**: El pull request PR es para abrir una solicitud a la rama main para poder integrar lo que tengamos en esa rama, de esta manera, si realizamos un issue y lo logramos solucionar podemos abrir un PR para que estos cambios sean revisados y aceptamos en la rama principal de nuestro proyecto.
 
 - **Flujos de trabajo comunes (Git Flow, trunk-based, feature branches).**: Git Flow utiliza ramas para características, release y hotfix, además de las ramas principales (main y develop). Feature Branch Workflow promueve el desarrollo en ramas dedicadas. Estos modelos facilitan la colaboración, el control de versiones y la gestión de cambios en proyectos de software, aunque cada uno tiene sus propias ventajas y desventajas en cuanto a complejidad y adaptabilidad a diferentes equipos y proyectos.
 - **Ejemplo de cómo usar Git en un proyecto (inicialización, commits, ramas).**:
@@ -282,6 +280,25 @@ flowchart LR
     E --> F[Aplicación disponible]
 ```
 ---
+### 📜  Documentación para desplegar 
+
+- **GIT**: Tienes que tener los archivos ya en un repositorio en tu GitHub,
+en este caso tiene que tener el index.html y el README.md
+![alt text](image.png)
+- **Netlify**: Tienes que ingresar en Netlify y crearte una cuenta, 
+puedes hacer el sign up con Github
+- **Netlify**: Buscas el apartado de **Projects**, buscas la opción de **Add new project**, luego en **Import an existing project**
+![alt text](image-1.png)
+- **Netlify**: En la ventana utilizas GitHub 
+![alt text](image-2.png)
+- **Netlify**: Seleccionas el repositorio que deseas publicar
+![alt text](image-3.png) 
+- **Netlify**: Seleccionas Deploy, y ya tendrías el projecto publicado
+![alt text](image-4.png)
+
+---
+
+
 ## 🔍 Referencias
  
 - https://urianviera.com/django/arquitectura-mvc-en-django
@@ -291,6 +308,8 @@ flowchart LR
 - https://kinsta.com/es/blog/flask-vs-django/
 - https://www.ilimit.com/es/blog/tecnologico-2/automatizacion-despliegue-continuo-30
 - https://www.ibm.com/mx-es/think/topics/continuous-deployment
-
+- https://support.typora.io/Draw-Diagrams-With-Markdown/
 - https://www.siteground.es/kb/sitio-web-estatico-vs-dinamico/
-https://www.figma.com/resource-library/static-vs-dynamic-website/
+- https://www.figma.com/resource-library/static-vs-dynamic-website/
+- https://auth0.com/docs/secure/tokens/json-web-tokens/json-web-token-structure
+- https://www.youtube.com/watch?v=7W6-jSOFMgM&t=741s
